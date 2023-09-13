@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JqueryCheck</title>
+</head>
+<body>
+   <h1 class="customerClassName" id="customId">Hello World</h1>
+   <div id="parent">
+    <strong>Blocked word here</strong>
+    <em>italicized word here</em>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam quasi laborum tempora non,
+         reiciendis debitis aperiam esse qui nobis quo nam iusto ducimus? Quis exercitationem officia
+          numquam libero dignissimos ducimus.</p>
+   </div>
+   <div id="target">Add Html before and after this</div>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("div#target").before("<h3>This is a title</h3>")
+            $("div#target").after("<p>This is a paragraph</p>")
+            const $parent=$("div#parent");
+    })
+    </script>
+</body>
+</html>

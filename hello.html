@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            width:200px;
+            height:200px;
+            background-color:black;
+            margin:5px auto;
+        }
+    </style>
+</head>
+<body>
+
+    <!--<button>Click me</button>-->
+    <div id="box"></div>
+    <div id="putAButtonHere"></div>
+    
+     <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+<script>
+
+    $(document).ready(function(){
+
+        $("#box")
+        .on("mouseenter",function(){
+            console.log("Your mouse is hovering over this box")
+        })
+
+        .on("mouseleave",function(){
+            console.log("You left the box area")
+        })
+
+        $(document).on("click","button",function(){
+            console.log("33333333")
+        })
+
+        const $parent=$("#putAButtonHere");
+        $parent.html("<button>Click the Dynamic Button</button")
+    
+    $("button").click(function(){
+     console.log("I am clicked")
+   })
+   //$("button").on("click",function(){
+    //console.log("This is clickable too")
+   //})
+
+})
+</script>
+</body>
+</html>
